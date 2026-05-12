@@ -4,6 +4,7 @@ import Header, { type Section } from "./components/Header";
 import HomePage from "./pages/HomePage";
 import SectionPlaceholder from "./components/SectionPlaceholder";
 import StackPage from "./pages/StackPage";
+import ProjectsPage from "./pages/ProjectsPage";
 
 function App() {
   const [introState, setIntroState] = useState<"playing" | "exiting" | "done">(
@@ -30,7 +31,7 @@ function App() {
         )}
 
         {activeSection === "proyectos" && (
-          <SectionPlaceholder title="Proyectos" />
+          <ProjectsPage onNavigate={handleNavigate} />
         )}
 
         {activeSection === "stack" && <StackPage onNavigate={handleNavigate} />}
