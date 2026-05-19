@@ -7,7 +7,7 @@ interface Props {
   onDone: () => void;
 }
 
-export default function IntroScreen({ onExitStart, onDone }: Props) {
+const IntroScreen = ({ onExitStart, onDone }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const logoRef = useRef<HTMLSpanElement>(null);
   const callbacksRef = useRef({ onExitStart, onDone });
@@ -58,4 +58,6 @@ export default function IntroScreen({ onExitStart, onDone }: Props) {
       />
     </div>
   );
-}
+};
+
+export default IntroScreen;
