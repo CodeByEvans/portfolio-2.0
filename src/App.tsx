@@ -2,11 +2,12 @@ import { useState, useCallback } from "react";
 import IntroScreen from "./components/IntroScreen";
 import Header, { type Section } from "./components/Header";
 import HomePage from "./pages/HomePage";
-import SectionPlaceholder from "./components/SectionPlaceholder";
+import ContactPage from "./pages/ContactPage";
 import StackPage from "./pages/StackPage";
 import ProjectsPage from "./pages/ProjectsPage";
+import AboutMePage from "./pages/AboutMePage";
 
-function App() {
+const App = () => {
   const [introState, setIntroState] = useState<"playing" | "exiting" | "done">(
     "playing",
   );
@@ -30,23 +31,17 @@ function App() {
           <HomePage animate={showMain} onNavigate={handleNavigate} />
         )}
 
+        {activeSection === "sobre-mi" && (
+          <AboutMePage onNavigate={handleNavigate} />
+        )}
+
         {activeSection === "proyectos" && (
           <ProjectsPage onNavigate={handleNavigate} />
         )}
 
         {activeSection === "stack" && <StackPage onNavigate={handleNavigate} />}
 
-        {activeSection === "sobre-mi" && (
-          <SectionPlaceholder title="Sobre mí" />
-        )}
-
-        {activeSection === "testimonios" && (
-          <SectionPlaceholder title="Testimonios" />
-        )}
-
-        {activeSection === "contacto" && (
-          <SectionPlaceholder title="Contacto" />
-        )}
+        {activeSection === "contacto" && <ContactPage />}
       </main>
 
       {introState !== "done" && (
@@ -57,6 +52,6 @@ function App() {
       )}
     </>
   );
-}
+};
 
 export default App;
