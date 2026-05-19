@@ -8,27 +8,40 @@ export interface Project {
   mediaSrc: string | string[];
   logoSrc: string;
   curiosity: string;
+  github?: string;
+  web?: string;
 }
 
 export const PROJECTS: Project[] = [
   {
     id: "cathub",
     title: "Cathub",
-    subtitle: "Conexión Peer-to-Peer",
+    subtitle: "Widget de llamadas y notas",
     description:
-      "App de llamadas peer-to-peer. Enlazas la app con tu pareja y os podéis mandar notas y llamaros. Además de ver la hora como un pro. Totalmente personalizable.",
-    techStack: ["Tauri", "Rust", "React", "Supabase", "ZOD", "SOLID", "Motion"],
+      "App de llamadas con WebRTC. Enlazas la app con tu pareja y os podéis mandar notas y llamaros. Está destinada a ser usada como un widget, por lo que se puede usar en segundo plano, personalizar el diseño y más. Es un proyecto de aprendizaje, por lo que no es perfecto, pero me ha servido para aprender un montón sobre Tauri, Rust, WebRTC y más.",
+    techStack: [
+      "Tauri",
+      "Rust",
+      "React",
+      "Node.js",
+      "Supabase",
+      "ZOD",
+      "Motion",
+      "Sonner",
+      "Express",
+    ],
     mediaType: "video",
     mediaSrc: "/Cathub.mp4",
     logoSrc: "/cathub - logo.svg",
     curiosity: "Los sonidos de llamadas y notificaciones los hice yo",
+    github: "https://github.com/CodeByEvans/Cathub",
   },
   {
     id: "tualergiahoy",
     title: "tualergiahoy",
     subtitle: "IA + Salud",
     description:
-      "App web con IA. open-meteo observa el clima, contacta con Gemini y genera un informe personalizado según tus alergias, con recomendaciones. Registra en Google Sheets, usa una plantilla de Google Docs y envía el informe por mail.",
+      "Aplicación web con IA. Es una app de salud que te ayuda a llevar un control de tu alergia. Puedes registrar tus alergias, la medicación recetada y recibir recomendaciones geeneradas con IA basadas en predicciones meteorológicas. ",
     techStack: [
       "Python",
       "Django",
@@ -43,6 +56,7 @@ export const PROJECTS: Project[] = [
     logoSrc: "/tualergiahoy.png",
     curiosity:
       "Backend Python + Django DRF · Frontend Vue · Automatización con Google Workspace",
+    github: "https://github.com/CodeByEvans/tualergiahoy",
   },
   {
     id: "clover-studio",
@@ -56,10 +70,16 @@ export const PROJECTS: Project[] = [
       "Supabase",
       "TypeScript",
       "TailwindCSS",
+      "Axios",
+      "jsPDF",
+      "Sonner",
+      "react-email",
     ],
     mediaType: "image",
-    mediaSrc: ["/clover-studio.png", "/clover studio - logo.svg"],
+    mediaSrc: ["/clover-studio.png"],
     logoSrc: "/clover studio - logo.svg",
     curiosity: "SEO optimizado · Dashboard privado en repo separado",
+    github: "https://github.com/CodeByEvans/clover-studio",
+    web: "https://cloverstudio.es",
   },
 ];

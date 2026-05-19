@@ -16,12 +16,16 @@ import {
   SiSpring,
   SiNestjs,
   SiCloudinary,
-  SiOpenai,
-  SiAnthropic,
+  SiDocker,
+  SiGit,
   SiMongodb,
   SiPostgresql,
   SiMysql,
   SiSupabase,
+  SiTypescript,
+  SiJavascript,
+  SiPython,
+  SiOpenjdk,
 } from "react-icons/si";
 import { PiTestTubeFill, PiDatabaseFill, PiCloudFill } from "react-icons/pi";
 
@@ -41,6 +45,7 @@ export interface Category {
 export interface Language {
   id: string;
   label: string;
+  icon: IconType;
   extension: string;
   filename: string;
   code: string;
@@ -52,6 +57,7 @@ export const LANGUAGES: Language[] = [
   {
     id: "typescript",
     label: "TypeScript",
+    icon: SiTypescript,
     extension: ".tsx",
     filename: "App.tsx",
     code: `import { createRoot } from "react-dom/client";
@@ -74,6 +80,7 @@ root.render(<Stack />);`,
   {
     id: "javascript",
     label: "JavaScript",
+    icon: SiJavascript,
     extension: ".jsx",
     filename: "App.jsx",
     code: `import { createRoot } from "react-dom/client";
@@ -95,6 +102,7 @@ root.render(<Stack />);`,
   {
     id: "python",
     label: "Python",
+    icon: SiPython,
     extension: ".py",
     filename: "views.py",
     code: `from django.shortcuts import render
@@ -120,6 +128,7 @@ Quit the server with CONTROL-C.`,
   {
     id: "java",
     label: "Java",
+    icon: SiOpenjdk,
     extension: ".java",
     filename: "StackController.java",
     code: `@Controller
@@ -184,15 +193,15 @@ export const CATEGORIES: Category[] = [
   },
   {
     id: "cloud",
-    label: "Cloud + IA",
+    label: "Cloud + Tools",
     icon: HiCloud,
-    description: "Cloud & AI",
+    description: "Cloud & DevOps",
     technologies: [
       { name: "Oracle", icon: PiDatabaseFill },
       { name: "AWS", icon: PiCloudFill },
       { name: "Cloudinary", icon: SiCloudinary },
-      { name: "OpenAI", icon: SiOpenai },
-      { name: "Claude", icon: SiAnthropic },
+      { name: "Git", icon: SiGit },
+      { name: "Docker", icon: SiDocker },
     ],
   },
   {
