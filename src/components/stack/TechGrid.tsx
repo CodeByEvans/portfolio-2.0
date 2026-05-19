@@ -6,7 +6,7 @@ interface Props {
   technologies: Technology[];
 }
 
-export default function TechGrid({ technologies }: Props) {
+const TechGrid = ({ technologies }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -35,4 +35,6 @@ export default function TechGrid({ technologies }: Props) {
       ))}
     </div>
   );
-}
+};
+
+export default TechGrid;

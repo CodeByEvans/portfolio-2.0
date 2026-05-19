@@ -8,11 +8,11 @@ interface Props {
   onSelect: (cat: Category) => void;
 }
 
-export default function CategoryButtons({
+const CategoryButtons = ({
   categories,
   selectedId,
   onSelect,
-}: Props) {
+}: Props) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -51,4 +51,6 @@ export default function CategoryButtons({
       ))}
     </div>
   );
-}
+};
+
+export default CategoryButtons;

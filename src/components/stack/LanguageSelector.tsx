@@ -9,12 +9,12 @@ interface Props {
   onExited: () => void;
 }
 
-export default function LanguageSelector({
+const LanguageSelector = ({
   languages,
   onSelect,
   exiting,
   onExited,
-}: Props) {
+}: Props) => {
   const gridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -81,4 +81,6 @@ export default function LanguageSelector({
       </div>
     </div>
   );
-}
+};
+
+export default LanguageSelector;

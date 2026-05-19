@@ -7,11 +7,11 @@ interface Props {
   onRevealComplete: () => void;
 }
 
-export default function ConsoleTerminal({
+const ConsoleTerminal = ({
   command,
   output,
   onRevealComplete,
-}: Props) {
+}: Props) => {
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -51,4 +51,6 @@ export default function ConsoleTerminal({
       </div>
     </div>
   );
-}
+};
+
+export default ConsoleTerminal;
